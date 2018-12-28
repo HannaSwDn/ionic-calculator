@@ -1,32 +1,30 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage } from 'ionic-angular';
 
 @IonicPage()
 @Component({
   selector: 'page-calculator',
-  templateUrl: 'calculator.html',
+  templateUrl: 'calculator.html'
 })
 export class CalculatorPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-
-  }
+  constructor() {}
 
   // add function for the power button
   reset() {
     let screen: HTMLElement = document.querySelector('.screen')
-    let second: number = 0
+    screen.innerHTML = ''
+  }
 
-    setInterval(function(){
-      second++
-      if (second % 2 == 0) {
-        screen.innerHTML = ''
-      } else if (second % 2 != 0) {
-        screen.innerHTML = '.'
-      }
-    }, 500);
+  window.onkeydown = (): any => {
+    let screen: HTMLElement = document.querySelector('.screen')
+    screen.innerHTML = 'errors'
   }
 
   // add calculate function
+  calculate() {
+    let screen: HTMLElement = document.querySelector('.screen')
+    screen.innerHTML = 'error'
+  }
 
 }
