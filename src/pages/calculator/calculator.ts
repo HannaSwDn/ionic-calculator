@@ -11,8 +11,8 @@ export class CalculatorPage {
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad CalculatorPage');
-  }
+  // add function for the power button
+
+  // add calculate function
 
 }
